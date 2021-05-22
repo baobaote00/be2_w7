@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TrainersController;
+use Illuminate\View\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +22,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/category', [CategoryController::class,'category']);
+
 Route::get('/companies', [CompaniesController::class,'companies']);
 
 Route::get('/trainer', [TrainersController::class,'trainers']);
 
-Route::get('/search', [TrainersController::class,'trainers']);
+Route::get('/search', [SearchController::class,'search']);

@@ -17,7 +17,14 @@ class CompaniesController extends Controller
         // Input::get('exampleCheckBox');
         $result = $request->get('exampleCheckBox');
         $obj = new Companies();
-        $companies = $obj->search($request->get('search'),$result);
+        
+        if ($request->get('search')!=null) {
+            $companies = $obj->search($request->get('search'),$result,$request->get('category'));    
+        }else{
+            $companies = $obj->paginate(15);
+        }
+        // var_dump($companies);die;
+        
         return view('companies',['companies' => $companies]);
     }
 }

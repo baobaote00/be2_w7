@@ -14,6 +14,6 @@ class TrainersController extends Controller
     public function trainers() {
        $obj = new Trainers();
        $trainers = $obj->paginate(15);
-        return view('search',['trainers' => $trainers]);
+        return view('trainer',['trainers' => $trainers]);
     }
 }
