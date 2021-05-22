@@ -52,6 +52,7 @@
                     <th scope="col">Code</th>
                     <th scope="col">Phone</th>
                     <th scope="col">Category id</th>
+                    <th scope="col">trainers</th>
                 </tr>
             </thead>
             @foreach ($companies as $company)
@@ -64,6 +65,7 @@
                         <td>{!! $company->company_code !!}</td>
                         <td>{!! $company->company_phone !!}</td>
                         <td>{!! $company->category_id !!}</td>
+                        <td>{!! $company->trainers['trainers_name'] !!}</td>
                     </tr>
                 </tbody>
             @endforeach

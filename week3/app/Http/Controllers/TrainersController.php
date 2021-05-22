@@ -11,9 +11,12 @@ use App\Models\Trainers;
 
 class TrainersController extends Controller
 {
-    public function trainers() {
-       $obj = new Trainers();
-       $trainers = $obj->paginate(15);
-        return view('trainer',['trainers' => $trainers]);
+    public function trainers()
+    {
+        $obj = new Trainers();
+        $trainers = $obj->paginate(15);
+        // var_dump(Trainers::find(12)->trainers()->get());die;
+        
+        return view('trainer', ['trainers' => $trainers]);
     }
 }

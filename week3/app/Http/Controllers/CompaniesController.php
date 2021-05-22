@@ -19,11 +19,10 @@ class CompaniesController extends Controller
         $obj = new Companies();
         
         if ($request->get('search')!=null) {
-            $companies = $obj->search($request->get('search'),$result,$request->get('category'));    
+            $companies = $obj->search($request->get('search'),$request->get('category'));    
         }else{
             $companies = $obj->paginate(15);
         }
-        // var_dump($companies);die;
         
         return view('companies',['companies' => $companies]);
     }

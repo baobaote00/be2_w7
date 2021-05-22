@@ -43,6 +43,7 @@
                     <th scope="col">Name</th>
                     <th scope="col">Email</th>
                     <th scope="col">Phone</th>
+                    <th scope="col">Companies</th>
                 </tr>
             </thead>
             @foreach ($trainers as $trainer)
@@ -52,6 +53,7 @@
                         <td>{!! $trainer->trainers_name !!}</td>
                         <td>{!! $trainer->trainers_email !!}</td>
                         <td>{!! $trainer->trainers_phone !!}</td>
+                        <td>{!! $trainer->companies['company_name'] !!}</td>
                     </tr>
                 </tbody>
             @endforeach

@@ -88,50 +88,6 @@
                 <input class="search_input" type="text" name="search" placeholder="Search...">
                 <button type="submit" class="search_icon"><i class="fas fa-search"></i></button>
             </div>
-            <div class="center">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-id"
-                        value="searchCompaniesId">
-                    <label class="form-check-label" for="search-id">
-                        Search ID
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-name"
-                        value="searchCompaniesName">
-                    <label class="form-check-label" for="search-name">
-                        Search name
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-web"
-                        value="searchCompaniesWeb">
-                    <label class="form-check-label" for="search-web">
-                        Search web
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-address"
-                        value="searchCompaniesAddress">
-                    <label class="form-check-label" for="search-address">
-                        Search address
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-code"
-                        value="searchCompaniesCode">
-                    <label class="form-check-label" for="search-code">
-                        Search code
-                    </label>
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="exampleCheckBox[]" id="search-phone"
-                        value="searchCompaniesPhone">
-                    <label class="form-check-label" for="search-phone">
-                        Search phone
-                    </label>
-                </div>
-            </div>
             {!! Form::select('category[]', $categories, null, ['class' => 'form-control']) !!}
         </form>
        
