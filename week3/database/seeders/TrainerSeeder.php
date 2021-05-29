@@ -19,5 +19,6 @@ class TrainerSeeder extends Seeder
             DB::insert($query, ['tien', 1, 'tien', 'tien']);
         }
         //
+        //21312312312312sdfsdf
     }
 }
