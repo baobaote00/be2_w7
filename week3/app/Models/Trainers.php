@@ -9,6 +9,4 @@ class Trainers extends Model
 {
     use SoftDeletes;
     protected $table = 'trainers';
-
-    }
 }
