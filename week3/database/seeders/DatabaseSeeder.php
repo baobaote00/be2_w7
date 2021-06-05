@@ -14,11 +14,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(CompanySeeder::class);
-        $this->call(TrainerSeeder::class);
-        DB::insert('insert into category values(null,?)',['tien']);
-        DB::insert('insert into category values(null,?)',['tien1']);
-        DB::insert('insert into category values(null,?)',['tien2']);
-//         \App\Models\User::factory(10)->create();
+        \App\Models\Faculties::factory(10)->create();
+        \App\Models\Course::factory(10)->create();
+        \App\Models\DiaryContent::factory(10)->create();
+        \App\Models\InternshipDiary::factory(10)->create();
+        \App\Models\Week::factory(10)->create();
+
+        $this->call([
+            ClassesSeeder::class,
+            StudentsSeeder::class,
+            TeachersSeeder::class,
+            UsersHasGroupsSeeder::class,
+        ]);
+        $this->call(companiesSeender::class); 
+        // Gọi hàm companiesSeeding đã tạo ở Seeder
+        $this->call(trainersSeender::class);
+        //Tương tự như trên
+        $this->call(catagorySeeder::class);
+
+        $this->call(categoryCompaniesSeeder::class);
+
+        $this->call(trainerDepartmentSeeder::class);
+
     }
 }
