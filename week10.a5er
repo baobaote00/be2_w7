@@ -190,10 +190,11 @@ Field="user_name","user_name","VARCHAR",,,"","",$FFFFFFFF,""
 Field="user_email","user_email","VARCHAR",,,"","",$FFFFFFFF,""
 Field="user_phone","user_phone","VARCHAR",,,"","",$FFFFFFFF,""
 Field="permission","permision","INT","NOT NULL",,"","",$FFFFFFFF,""
+Field="password","password","",,,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20210530105642
+ModifiedDateTime=20210612082705
 Position="MAIN",1400,450,329,284
 ZOrder=9
 
@@ -815,7 +816,7 @@ Field="week_id","week_id","INT","NOT NULL",,"","",$FFFFFFFF,""
 EffectMode=None
 Color=$000000
 BkColor=$FFFFFF
-ModifiedDateTime=20210605100134
+ModifiedDateTime=20210605123610
 Position="MAIN",3000,1400,322,351
 ZOrder=60
 
