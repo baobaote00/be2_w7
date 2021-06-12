@@ -19,6 +19,11 @@ class DatabaseSeeder extends Seeder
         \App\Models\DiaryContent::factory(10)->create();
         \App\Models\InternshipDiary::factory(10)->create();
         \App\Models\Week::factory(10)->create();
+        \App\Models\UserHasPermission::factory(10)->create();
+        \App\Models\User::factory(10)->create();
+        \App\Models\GroupHasPermission::factory(10)->create();
+        \App\Models\Group::factory(10)->create();
+        \App\Models\Permission::factory(10)->create();
 
         $this->call([
             ClassesSeeder::class,

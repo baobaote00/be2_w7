@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\TrainersController;
 use Illuminate\View\View;
@@ -29,3 +30,10 @@ Route::get('/companies', [CompaniesController::class,'companies']);
 Route::get('/trainer', [TrainersController::class,'trainers']);
 
 Route::get('/search', [SearchController::class,'search']);
+
+Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
+Route::get('login', [CustomAuthController::class, 'index'])->name('login');
+Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom'); 
+Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
+Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
